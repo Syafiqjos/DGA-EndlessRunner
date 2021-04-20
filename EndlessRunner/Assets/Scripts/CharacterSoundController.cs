@@ -8,9 +8,16 @@ public class CharacterSoundController : MonoBehaviour
 
     private AudioSource audioPlayer;
 
+    public AudioClip scoreHighlight;
+
     private void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
+    }
+
+    public void PlayScoreHighlight()
+    {
+        audioPlayer.PlayOneShot(scoreHighlight);
     }
 
     public void PlayJump()
